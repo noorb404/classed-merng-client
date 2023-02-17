@@ -19,12 +19,7 @@ const httpLink = createHttpLink({
     uri:  'https://evening-sea-33836.herokuapp.com/'
 });
 
-const wsLink = new WebSocketLink({
-    uri: 'wss://evening-sea-33836.herokuapp.com/',
-    options: {
-      reconnect: true
-    }
-});
+
 const splitLink = split(
     ({ query }) => {
       const definition = getMainDefinition(query);
