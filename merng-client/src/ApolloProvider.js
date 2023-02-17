@@ -20,7 +20,7 @@ const httpLink = createHttpLink({
 });
 
 const wsLink = new WebSocketLink({
-    uri: 'ws://localhost:5000',
+    uri: 'wss://evening-sea-33836.herokuapp.com/',
     options: {
       reconnect: true
     }
