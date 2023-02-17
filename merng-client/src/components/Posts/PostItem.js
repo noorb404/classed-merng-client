@@ -1,8 +1,4 @@
-import { Button, Confirm, Icon, Label , Loader, Modal } from "semantic-ui-react";
-import school1 from '../../images/school1.jpeg';
-import school2 from '../../images/school2.jpeg';
-import egod from '../../images/egod.jpeg';
-import G1 from '../../images/G1.jpg';
+import { Button, Confirm, Icon, Label , Loader} from "semantic-ui-react";
 
 import moment from 'moment';
 import { Link } from "react-router-dom";
@@ -13,8 +9,7 @@ import MyPopup from "../../util/MyPopup";
 import {Image} from 'cloudinary-react';
 import { useMutation, useQuery } from "@apollo/react-hooks";
 import { FETCH_POSTS_QUERY, FETCH_USER } from "../../util/GraphQL";
-import PostUpload from "./PostUpload";
-import UseForm from "../../util/hooks";
+
 import gql from 'graphql-tag';
 
 
@@ -33,7 +28,7 @@ const PostItem = ({post:{description,id,name,username,createdAt,likeCount,commen
 
  
     
-    const [createPost , {error}] = useMutation(CREATE_POST , {
+    const [createPost ] = useMutation(CREATE_POST , {
       
             variables: {
                 description: description,

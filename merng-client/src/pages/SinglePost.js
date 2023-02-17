@@ -17,9 +17,7 @@ import {Image} from 'cloudinary-react';
 import { AuthContext } from '../context/auth';
 import LikeButton from '../components/LikeButton';
 import DeleteButton from '../components/DeleteButton';
-import upload from '../images/upload.png'
 import { Link } from 'react-router-dom';
-import test from '../images/test.jpg';
 import { FETCH_USER } from '../util/GraphQL';
 
 function SinglePost(props) {
@@ -72,7 +70,7 @@ function SinglePost(props) {
       postMarkup = <p> Loading ..</p>
   }else{
 
-        const  {id , description ,createdAt, username ,name ,likes , comments , likeCount , commentCount , image} = data.getPost;
+        const  {id , description ,createdAt, username,likes , comments , likeCount , commentCount , image} = data.getPost;
         postMarkup = (
           <Container className="p-5">
               <Grid>

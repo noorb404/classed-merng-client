@@ -1,18 +1,12 @@
-import { Button, Card, Container, Icon, Label , Loader } from "semantic-ui-react";
+import {  Card,  Icon } from "semantic-ui-react";
 
-import moment from 'moment';
 import { Link } from "react-router-dom";
-import {AuthContext} from '../../context/auth';
-import { useContext } from "react";
-import LikeButton from '../LikeButton';
-import MyPopup from "../../util/MyPopup";
+import { Nav } from 'react-bootstrap';
+
 import {Image} from 'cloudinary-react';
-import { useQuery } from "@apollo/react-hooks";
-import { FETCH_USER } from "../../util/GraphQL";
 import './User.css'
 
-const UserItem = ({User:{id,phone,address,email,website,image,date,gas,water,paper,username,name,electricity}}) => {
-    const context = useContext(AuthContext);
+const UserItem = ({User:{address,website,image,date,username,name}}) => {
 
     return (
       
@@ -31,10 +25,10 @@ const UserItem = ({User:{id,phone,address,email,website,image,date,gas,water,pap
                         </Card.Description>
                         </Card.Content>
                         <Card.Content extra>
-                        <a>
+                        <Nav.Link>
                             <Icon name='home' />
                             {address}
-                        </a>
+                        </Nav.Link>
                         </Card.Content>
                     </Card>
                 

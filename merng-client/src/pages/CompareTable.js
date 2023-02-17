@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react'
-import {  Button, Container, Dropdown, Table } from 'semantic-ui-react';
+import {  Container, Dropdown, Table } from 'semantic-ui-react';
 import '../components/Cards/card-style.css';
 import PostUpload from '../components/Posts/PostUpload';
 const options = [

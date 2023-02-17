@@ -4,7 +4,7 @@ import {Navbar , Nav } from 'react-bootstrap';
 import './NavigationBar.css';
 import { Container, Icon, Loader } from 'semantic-ui-react';
 import {AuthContext} from '../../context/auth';
-import { gql, useMutation, useQuery,useSubscription } from '@apollo/react-hooks';
+import { gql, useQuery,useSubscription } from '@apollo/react-hooks';
 import { FETCH_USER } from '../../util/GraphQL';
 import {Image} from 'cloudinary-react';
 
@@ -26,7 +26,6 @@ const NEW_LIKE = gql`
 
 const NavigationBar = () => {
         const context = useContext(AuthContext);
-        const s='sad';
         const {loading,data} = useQuery(FETCH_USER,{
             variables:{
                 username: context.user? context.user.username : null

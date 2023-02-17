@@ -35,7 +35,7 @@ const PostUpload = () => {
              }
          }
          });
-
+         console.log(response);
       
          onChange(FakeEvent);
      

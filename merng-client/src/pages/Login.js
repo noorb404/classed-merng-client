@@ -4,7 +4,7 @@ import {Container, Button, Form, Grid, Header,  Segment } from 'semantic-ui-reac
 import {useMutation} from '@apollo/react-hooks';
 import useForm from '../util/hooks';
 import {AuthContext} from '../context/auth';
-import {Navbar , Nav } from 'react-bootstrap';
+import { Nav } from 'react-bootstrap';
 
 
 const Login = props => {

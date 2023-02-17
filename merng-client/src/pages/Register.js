@@ -3,7 +3,7 @@ import { useState } from 'react';
 import {Container, Button, Form, Grid, Header, Segment ,Select} from 'semantic-ui-react';
 import {useMutation} from '@apollo/react-hooks';
 import useForm from '../util/hooks';
-import {Navbar , Nav } from 'react-bootstrap';
+import { Nav } from 'react-bootstrap';
 
 const Register = () => {
     const [errors,setErrors] =useState({});

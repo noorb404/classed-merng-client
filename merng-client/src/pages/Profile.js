@@ -2,7 +2,7 @@
 import '../css/Home.css';
 import '../css/Header.css';
 import '../css/Profile.css';
-import { Button, Card, Container, Form, Grid, Icon, Loader, Modal, Segment } from 'semantic-ui-react';
+import { Button, Card,  Form, Grid, Icon, Loader, Modal, Segment } from 'semantic-ui-react';
 import {Image} from 'cloudinary-react';
 import {AuthContext} from '../context/auth';
 import { useContext, useState } from 'react';
@@ -12,7 +12,6 @@ import PostList from '../components/Posts/PostList';
 import UseForm from '../util/hooks';
 import { useParams } from 'react-router-dom';
 import PostUpload from '../components/Posts/PostUpload';
-import ImageUpload from '../components/ImageUpload/ImageUpload';
 import axios from 'axios';
 import { Col, Row } from 'react-bootstrap';
 
@@ -60,6 +59,7 @@ const Profile = () => {
                 }
             }
             });
+            console.log(response);
             onChange(FakeEvent);
         
         
